@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CUONG STORE</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#111;
+}
+
+/* HEADER */
+header{
+    background:#111;
+    color:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ff4d4d;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+nav a:hover{
+    color:#ff4d4d;
+}
+
+/* HERO */
+.hero{
+    min-height:500px;
+    background:linear-gradient(120deg,#111,#333);
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:60px 8%;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ff4d4d;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.6;
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff4d4d;
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ff2929;
+    transform:translateY(-3px);
+}
+
+.hero-icon{
+    font-size:180px;
+}
+
+/* PRODUCTS */
+.products{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:35px;
+}
+
+.title p{
+    color:#777;
+    margin-top:10px;
+}
+
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.product-img{
+    height:220px;
+    background:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#e53935;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.old-price{
+    font-size:14px;
+    color:#999;
+    text-decoration:line-through;
+    margin-left:8px;
+}
+
+.buy{
+    width:100%;
+    border:none;
+    background:#111;
+    color:white;
+    padding:12px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.buy:hover{
+    background:#ff4d4d;
+}
+
+/* FEATURES */
+.features{
+    background:white;
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    text-align:center;
+}
+
+.feature{
+    padding:20px;
+}
+
+.feature div{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* CART */
+.cart{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#ff4d4d;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 5px 20px #999;
+}
+
+@media(max-width:700px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-icon{
+        display:none;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        CUONG<span>STORE</span>
+    </div>
+
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#about">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Mua sắm <span>chất hơn</span>
+        </h1>
+
+        <p>
+            Khám phá những sản phẩm nổi bật với mức giá tốt.
+            Giao hàng nhanh, thanh toán thuận tiện và hỗ trợ khách hàng tận tâm.
+        </p>
+
+        <a href="#products" class="btn">
+            Khám phá sản phẩm
+        </a>
+
+    </div>
+
+    <div class="hero-icon">
+        🛍️
+    </div>
+
+</section>
+
+
+<section class="products" id="products">
+
+    <div class="title">
+        <h2>Sản phẩm nổi bật</h2>
+        <p>Một số sản phẩm bán chạy tại CUONG STORE</p>
+    </div>
+
+
+    <div class="product-list">
+
+        <div class="card">
+
+            <div class="product-img">
+                👟
+            </div>
+
+            <div class="product-info">
+
+                <h3>Sneaker Premium</h3>
+
+                <div class="price">
+                    1.290.000đ
+                    <span class="old-price">1.590.000đ</span>
+                </div>
+
+                <button class="buy" onclick="addCart('Sneaker Premium')">
+                    Thêm vào giỏ
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="product-img">
+                🎧
+            </div>
+
+            <div class="product-info">
+
+                <h3>Headphone Pro</h3>
+
+                <div class="price">
+                    890.000đ
+                    <span class="old-price">1.090.000đ</span>
+                </div>
+
+                <button class="buy" onclick="addCart('Headphone Pro')">
+                    Thêm vào giỏ
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="product-img">
+                ⌚
+            </div>
+
+            <div class="product-info">
+
+                <h3>Smart Watch</h3>
+
+                <div class="price">
+                    1.490.000đ
+                    <span class="old-price">1.890.000đ</span>
+                </div>
+
+                <button class="buy" onclick="addCart('Smart Watch')">
+                    Thêm vào giỏ
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="product-img">
+                🎒
+            </div>
+
+            <div class="product-info">
+
+                <h3>Urban Backpack</h3>
+
+                <div class="price">
+                    690.000đ
+                    <span class="old-price">850.000đ</span>
+                </div>
+
+                <button class="buy" onclick="addCart('Urban Backpack')">
+                    Thêm vào giỏ
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features" id="about">
+
+    <div class="feature">
+        <div>🚚</div>
+        <h3>Giao hàng nhanh</h3>
+        <p>Giao hàng toàn quốc nhanh chóng.</p>
+    </div>
+
+    <div class="feature">
+        <div>🛡️</div>
+        <h3>Đảm bảo chất lượng</h3>
+        <p>Sản phẩm được kiểm tra trước khi giao.</p>
+    </div>
+
+    <div class="feature">
+        <div>💬</div>
+        <h3>Hỗ trợ khách hàng</h3>
+        <p>Luôn sẵn sàng hỗ trợ khi bạn cần.</p>
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 CUONG STORE - Website bán hàng demo
+</footer>
+
+
+<div class="cart">
+    🛒 Giỏ hàng: <span id="cartCount">0</span>
+</div>
+
+
+<script>
+
+let cart = 0;
+
+function addCart(product){
+
+    cart++;
+
+    document.getElementById("cartCount").innerText = cart;
+
+    alert("Đã thêm " + product + " vào giỏ hàng!");
+
+}
+
+</script>
+
+</body>
+</html>
